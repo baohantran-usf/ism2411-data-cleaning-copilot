@@ -19,12 +19,12 @@ def clean_column_names(df: pd.DataFrame) -> pd.DataFrame:
     )
     return df
 
-# Function 3 — HANDLE MISSING VALUES
+# Function 3 — HANDLE MISSING VALUES (COPILOT FIXED)
 def handle_missing_values(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.dropna(subset=["price", "qty"])
+    df = df.dropna(subset=["price", "qty"]) #change from quantity to qty
     return df
 
-# Function 4 — REMOVE INVALID ROWS
+# Function 4 — REMOVE INVALID ROWS (COPILOT ASSISTED)
 def remove_invalid_rows(df: pd.DataFrame) -> pd.DataFrame:
 # Convert to numeric (important fix for your error)
     df["price"] = pd.to_numeric(df["price"], errors="coerce")
